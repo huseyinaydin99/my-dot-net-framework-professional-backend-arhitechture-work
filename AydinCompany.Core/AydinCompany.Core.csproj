@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="DataAccess\EntityFramework\EfQueryableRepository.cs" />
     <Compile Include="DataAccess\IEntityRepository.cs" />
     <Compile Include="DataAccess\IQueryableRepository.cs" />
     <Compile Include="Entities\IEntity.cs" />
