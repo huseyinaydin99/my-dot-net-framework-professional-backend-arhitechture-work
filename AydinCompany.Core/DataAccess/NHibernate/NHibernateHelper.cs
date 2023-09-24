@@ -13,7 +13,7 @@ namespace AydinCompany.Core.DataAccess.NHibernate
 
         public virtual ISessionFactory SessionFactory //virtual vermemizin sebebi lazy loading(ilişki tablolardaki verilerinde yüklenmesi) içindir. 
         {
-            get {return _sessionFactory ?? (_sessionFactory = InitializeFactory())}
+            get { return _sessionFactory ?? (_sessionFactory = InitializeFactory()); }
         }
 
         protected abstract ISessionFactory InitializeFactory();
