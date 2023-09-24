@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AydinCompany.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
 using AydinCompany.Northwind.Entities.ComplexType;
+using AydinCompany.Northwind.Entities.Concrete;
 
 namespace AydinCompany.Northwind.DataAccess.Concrete.EntityFramework
 {
@@ -23,5 +24,6 @@ namespace AydinCompany.Northwind.DataAccess.Concrete.EntityFramework
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
