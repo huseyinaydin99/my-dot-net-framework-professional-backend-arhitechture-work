@@ -12,6 +12,21 @@ namespace AydinCompany.Northwind.DataAccess.Concrete.EntityFramework
 {
     public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
     {
-       
+        public List<ProductDetail> GetProductDetail()
+        {
+            using (var northwindContext = new NorthwindContext())
+            {
+                var result = from p in northwindContext.Products
+                             join c in northwindContext.Categories
+                                 on p.CategoryId equals c.CategoryId
+                             select new ProductDetail
+                             {
+                                 ProductId = p.ProductId,
+                                 ProductName = p.ProductName,
+                                 CategoryName = c.CategoryName
+                             };
+                return result.ToList();
+            }
+        }
     }
 }

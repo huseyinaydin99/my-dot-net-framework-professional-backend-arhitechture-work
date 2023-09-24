@@ -10,6 +10,6 @@ namespace AydinCompany.Northwind.DataAccess.Abstract
 {
     public interface IProductDal : IEntityRepository<Product>
     {
-
+        List<ProductDetail> GetProductDetail();
     }
 }
