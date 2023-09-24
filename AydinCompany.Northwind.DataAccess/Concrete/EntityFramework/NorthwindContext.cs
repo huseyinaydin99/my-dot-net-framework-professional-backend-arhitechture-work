@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace AydinCompany.Northwind.DataAccess.Concrete.EntityFramework
 {
     public class NorthwindContext : DbContext
     {
-        public NorthwindContext()
+        public NorthwindContext() : base(ConfigurationManager.ConnectionStrings["NorthwindContext"].ConnectionString)
         {
             Database.SetInitializer<NorthwindContext>(null);
         }

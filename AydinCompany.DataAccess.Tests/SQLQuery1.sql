@@ -1,0 +1,1 @@
+﻿SELECT COUNT(*) FROM Products WHERE ProductName LIKE '%ab%';
