@@ -5,7 +5,7 @@ using AydinCompany.Northwind.DataAccess.Concrete.EntityFramework;
 namespace AydinCompany.DataAccess.Tests.EntityFrameworkTests
 {
     [TestClass]
-    public class EntityFrameworkTest
+    public class NHibernateTest
     {
         [TestMethod]
         public void Get_all_returns_all_products()

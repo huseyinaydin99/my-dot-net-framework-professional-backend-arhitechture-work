@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComplexType\Product.cs" />
+    <Compile Include="Concrete\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Concrete\" />
+    <Folder Include="ComplexType\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AydinCompany.Core\AydinCompany.Core.csproj">
