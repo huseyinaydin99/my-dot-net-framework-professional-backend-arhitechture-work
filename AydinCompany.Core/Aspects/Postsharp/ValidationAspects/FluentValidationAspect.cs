@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AydinCompany.Core.CrossCuttingConserns.Validation.FluentValidation;
 using AydinCompany.Core.Entities;
 using FluentValidation;
 using NHibernate.Util;
 using PostSharp.Aspects;
 
-namespace AydinCompany.Core.Aspects.Postsharp
+namespace AydinCompany.Core.Aspects.Postsharp.ValidationAspects
 {
     //aspect'lerde compiletime(derleme zamanı)'nında serileştirilip koda dahil olması için gerekli attribute'dir.
     [Serializable] //nesnenin durumunu serileştirir. byte dizisi haline getirir. 
