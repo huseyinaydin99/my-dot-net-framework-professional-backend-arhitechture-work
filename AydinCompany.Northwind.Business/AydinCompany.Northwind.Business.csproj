@@ -41,7 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IProductService.cs" />
+    <Compile Include="Concrete\Manager\ProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AydinCompany.Core\AydinCompany.Core.csproj">
+      <Project>{73E263E4-B397-4110-9F4B-0C3ACF886319}</Project>
+      <Name>AydinCompany.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AydinCompany.Northwind.DataAccess\AydinCompany.Northwind.DataAccess.csproj">
+      <Project>{81DE84FB-CCC1-43E2-A18F-E910AF88237A}</Project>
+      <Name>AydinCompany.Northwind.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AydinCompany.Northwind.Entities\AydinCompany.Northwind.Entities.csproj">
+      <Project>{CE833D30-AA79-45BF-8525-759815E5E0AF}</Project>
+      <Name>AydinCompany.Northwind.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
