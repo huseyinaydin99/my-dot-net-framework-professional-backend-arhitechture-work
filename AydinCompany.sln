@@ -39,9 +39,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AydinCompany.Northwind.WCFS
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.Business.Tests", "AydinCompany.Business.Tests\AydinCompany.Business.Tests.csproj", "{2091BC60-14EF-4364-AF3C-ADE1AA610064}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.Northwind.Business.Tests", "AydinCompany.Business.Tests\AydinCompany.Northwind.Business.Tests.csproj", "{2091BC60-14EF-4364-AF3C-ADE1AA610064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.DataAccess.Tests", "AydinCompany.DataAccess.Tests\AydinCompany.DataAccess.Tests.csproj", "{C6DF1C18-98BE-41EC-901A-CDBEBEE2E39E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.Northwind.DataAccess.Tests", "AydinCompany.DataAccess.Tests\AydinCompany.Northwind.DataAccess.Tests.csproj", "{C6DF1C18-98BE-41EC-901A-CDBEBEE2E39E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
