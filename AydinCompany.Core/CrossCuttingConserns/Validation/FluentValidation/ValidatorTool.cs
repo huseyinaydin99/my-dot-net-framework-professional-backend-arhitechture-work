@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using AydinCompany.Core.Entities;
 using FluentValidation;
-using ValidationException = System.ComponentModel.DataAnnotations.ValidationException;
 
 namespace AydinCompany.Core.CrossCuttingConserns.Validation.FluentValidation
 {

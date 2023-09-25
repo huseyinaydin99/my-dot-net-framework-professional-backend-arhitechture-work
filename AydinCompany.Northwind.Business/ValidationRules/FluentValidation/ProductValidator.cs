@@ -19,7 +19,7 @@ namespace AydinCompany.Northwind.Business.ValidationRules.FluentValidation
             RuleFor(p => p.QuantityPerUnit).NotNull().NotEmpty();
             RuleFor(p => p.ProductName).Length(2, 20); //min 2 max 20 karakter olabilir. 2 ila 20 arası olmak zorundadır.
             RuleFor(p => p.UnitPrice).GreaterThan(20).When(p => p.ProductId == 1); //ürün id'si 1 girildiğinde UnitPrice'i 20'nin üstünde girmek zorundadır diye kural koyduk.
-            RuleFor(p => p.ProductName).Must(StartWithA);
+            //RuleFor(p => p.ProductName).Must(StartWithA);
         }
 
         private bool StartWithA(string arg)
