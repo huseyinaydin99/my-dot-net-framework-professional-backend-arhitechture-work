@@ -32,7 +32,8 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
 
 
         [CacheAspect(typeof(MemoryCacheManager), 59)]
-        [LogAspect(typeof(DatabaseLogger))] //database logger ile loglayacağım dedik.
+        [LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
+        [LogAspect(typeof(FileLogger))] //aynı zamanda FileLogger ile loglayacaksın dedik.
         public List<Product> GetAll()
         {
             return _productDal.GetList();
