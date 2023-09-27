@@ -6,9 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using AydinCompany.Core.Aspects.Postsharp;
 using AydinCompany.Core.Aspects.Postsharp.CacheAspects;
+using AydinCompany.Core.Aspects.Postsharp.LogAspects;
 using AydinCompany.Core.Aspects.Postsharp.TransactionAspects;
 using AydinCompany.Core.Aspects.Postsharp.ValidationAspects;
 using AydinCompany.Core.CrossCuttingConserns.Caching.Microsoft;
+using AydinCompany.Core.CrossCuttingConserns.Logging.Log4Net.Loggers;
 using AydinCompany.Core.CrossCuttingConserns.Validation.FluentValidation;
 using AydinCompany.Northwind.Business.Abstract;
 using AydinCompany.Northwind.Business.ValidationRules.FluentValidation;
@@ -30,6 +32,7 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
 
 
         [CacheAspect(typeof(MemoryCacheManager), 59)]
+        [LogAspect(typeof(DatabaseLogger))] //database logger ile loglayacağım dedik.
         public List<Product> GetAll()
         {
             return _productDal.GetList();
