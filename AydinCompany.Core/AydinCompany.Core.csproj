@@ -54,6 +54,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,6 +66,8 @@
   <ItemGroup>
     <Compile Include="Aspects\Postsharp\TransactionAspects\TransactionScopeAspect.cs" />
     <Compile Include="Aspects\Postsharp\ValidationAspects\FluentValidationAspect.cs" />
+    <Compile Include="CrossCuttingConserns\Caching\ICacheManager.cs" />
+    <Compile Include="CrossCuttingConserns\Caching\Microsoft\MemoryCacheManager.cs" />
     <Compile Include="CrossCuttingConserns\Validation\FluentValidation\ValidatorTool.cs" />
     <Compile Include="DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\EntityFramework\EfQueryableRepository.cs" />
