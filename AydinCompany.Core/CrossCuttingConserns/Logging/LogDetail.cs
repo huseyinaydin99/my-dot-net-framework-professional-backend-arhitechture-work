@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace AydinCompany.Core.CrossCuttingConserns.Logging
 {
     //Loglanacak metohod'a ait property'ler.
-    //O method'a ait 
+    //O metot'a ait bilgiler.
     public class LogDetail
     {
-        public string FullName { get; set; }
-        public string MethodName { get; set; }
+        public string FullName { get; set; } //metot full adı.
+        public string MethodName { get; set; }//metot adı.
         public List<LogParameter> Parameters { get; set; }
     }
 }
