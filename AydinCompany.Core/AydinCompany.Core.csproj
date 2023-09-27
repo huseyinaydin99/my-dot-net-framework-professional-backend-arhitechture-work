@@ -70,6 +70,8 @@
     <Compile Include="Aspects\Postsharp\ValidationAspects\FluentValidationAspect.cs" />
     <Compile Include="CrossCuttingConserns\Caching\ICacheManager.cs" />
     <Compile Include="CrossCuttingConserns\Caching\Microsoft\MemoryCacheManager.cs" />
+    <Compile Include="CrossCuttingConserns\Logging\LogDetail.cs" />
+    <Compile Include="CrossCuttingConserns\Logging\LogParameter.cs" />
     <Compile Include="CrossCuttingConserns\Validation\FluentValidation\ValidatorTool.cs" />
     <Compile Include="DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\EntityFramework\EfQueryableRepository.cs" />
@@ -81,7 +83,9 @@
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CrossCuttingConserns\Logging\Log4Net\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
