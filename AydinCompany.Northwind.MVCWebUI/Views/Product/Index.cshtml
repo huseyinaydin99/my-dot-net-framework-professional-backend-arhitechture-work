@@ -11,11 +11,12 @@
     <title>Selamlar</title>
 </head>
 <body>
-<div>
-      @foreach (var item in Model.Products)
-      {
-          <i>@item.ProductName</i>
-      }
-</div>
+    <div>
+        @foreach (var item in Model.Products)
+        {
+            <b>@item.ProductName</b>
+            <hr />
+        }
+    </div>
 </body>
 </html>

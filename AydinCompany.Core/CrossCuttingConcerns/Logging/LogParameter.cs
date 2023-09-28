@@ -1,4 +1,4 @@
-﻿namespace AydinCompany.Core.CrossCuttingConserns.Logging
+﻿namespace AydinCompany.Core.CrossCuttingConcerns.Logging
 {
     //Log data'sını tutacak bir nesne.
     public class LogParameter

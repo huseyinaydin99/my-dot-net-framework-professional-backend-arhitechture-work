@@ -9,9 +9,8 @@ using AydinCompany.Core.Aspects.Postsharp.CacheAspects;
 using AydinCompany.Core.Aspects.Postsharp.LogAspects;
 using AydinCompany.Core.Aspects.Postsharp.TransactionAspects;
 using AydinCompany.Core.Aspects.Postsharp.ValidationAspects;
-using AydinCompany.Core.CrossCuttingConserns.Caching.Microsoft;
-using AydinCompany.Core.CrossCuttingConserns.Logging.Log4Net.Loggers;
-using AydinCompany.Core.CrossCuttingConserns.Validation.FluentValidation;
+using AydinCompany.Core.CrossCuttingConcerns.Caching.Microsoft;
+using AydinCompany.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using AydinCompany.Northwind.Business.Abstract;
 using AydinCompany.Northwind.Business.ValidationRules.FluentValidation;
 using AydinCompany.Northwind.DataAccess.Abstract;
@@ -22,11 +21,11 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
-        private readonly IQueryable<Product> _queryable;
+        //private readonly IQueryable<Product> _queryable;
 
-        public ProductManager(IQueryable<Product> queryable, IProductDal productDal)
+        public ProductManager(/*IQueryable<Product> queryable,*/ IProductDal productDal)
         {
-            _queryable = queryable;
+            //_queryable = queryable;
             _productDal = productDal;
         }
 

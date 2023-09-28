@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using AydinCompany.Core.CrossCuttingConserns.Caching;
+using AydinCompany.Core.CrossCuttingConcerns.Caching;
 using PostSharp.Aspects;
 
 namespace AydinCompany.Core.Aspects.Postsharp.CacheAspects

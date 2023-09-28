@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using AydinCompany.Core.CrossCuttingConserns.Validation.FluentValidation;
+using AydinCompany.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using AydinCompany.Core.Entities;
 using FluentValidation;
 using NHibernate.Util;

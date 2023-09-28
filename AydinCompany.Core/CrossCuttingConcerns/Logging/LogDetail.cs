@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace AydinCompany.Core.CrossCuttingConserns.Logging
+namespace AydinCompany.Core.CrossCuttingConcerns.Logging
 {
     //Loglanacak metohod'a ait property'ler.
     //O metot'a ait bilgiler.

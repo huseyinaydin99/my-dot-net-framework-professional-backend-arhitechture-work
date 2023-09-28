@@ -4,8 +4,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using AydinCompany.Core.CrossCuttingConserns.Logging;
-using AydinCompany.Core.CrossCuttingConserns.Logging.Log4Net;
+using AydinCompany.Core.CrossCuttingConcerns.Logging;
+using AydinCompany.Core.CrossCuttingConcerns.Logging.Log4Net;
 using PostSharp.Aspects;
 using PostSharp.Extensibility;
 
@@ -21,6 +21,7 @@ namespace AydinCompany.Core.Aspects.Postsharp.LogAspects
         public LogAspect(Type loggerType)
         {
             _loggerType = loggerType;
+            
         }
 
         public override void RuntimeInitialize(MethodBase method)

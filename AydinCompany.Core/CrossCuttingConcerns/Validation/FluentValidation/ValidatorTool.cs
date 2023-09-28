@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AydinCompany.Core.Entities;
+﻿using AydinCompany.Core.Entities;
 using FluentValidation;
 
-namespace AydinCompany.Core.CrossCuttingConserns.Validation.FluentValidation
+namespace AydinCompany.Core.CrossCuttingConcerns.Validation.FluentValidation
 {
     public class ValidatorTool
     {
