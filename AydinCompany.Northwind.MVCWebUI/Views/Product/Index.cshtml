@@ -1,0 +1,21 @@
+﻿@model ProductListViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Selamlar</title>
+</head>
+<body>
+<div>
+      @foreach (var item in Model.Products)
+      {
+          <i>@item.ProductName</i>
+      }
+</div>
+</body>
+</html>

@@ -7,6 +7,7 @@ using log4net;
 
 namespace AydinCompany.Core.CrossCuttingConserns.Logging.Log4Net
 {
+    [Serializable]
     public class LoggerService
     {
         private ILog _log;
