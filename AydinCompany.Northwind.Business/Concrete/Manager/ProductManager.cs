@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using AydinCompany.Core.Aspects.Postsharp;
 using AydinCompany.Core.Aspects.Postsharp.CacheAspects;
@@ -36,6 +37,7 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
          //aynı zamanda FileLogger ile loglayacaksın dedik.
         public List<Product> GetAll()
         {
+            Thread.Sleep(3800);
             return _productDal.GetList();
         }
 

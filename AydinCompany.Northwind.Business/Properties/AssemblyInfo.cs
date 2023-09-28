@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using AydinCompany.Core.Aspects.Postsharp.ExceptionAspects;
 using AydinCompany.Core.Aspects.Postsharp.LogAspects;
+using AydinCompany.Core.Aspects.Postsharp.PerformanceAspects;
 using AydinCompany.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
 // General Information about an assembly is controlled through the following
@@ -19,6 +20,8 @@ using AydinCompany.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 [assembly: LogAspect(typeof(FileLogger), AttributeTargetTypes = "AydinCompany.Northwind.Business.Concrete.Manager.*")] //ilgili namespace'nin içindeki tüm Manager sınıflarına Loglama Aspect'ini uygular.
 [assembly: LogAspect(typeof(DatabaseLogger), AttributeTargetTypes = "AydinCompany.Northwind.Business.Concrete.Manager.*")] //ilgili namespace'nin içindeki tüm Manager sınıflarına Loglama Aspect'ini uygular.
 [assembly: ExceptionLogAspect(typeof(DatabaseLogger), AttributeTargetTypes = "AydinCompany.Northwind.Business.Concrete.Manager.*")]
+[assembly: PerformanceCounterAspect(6, AttributeTargetTypes = "AydinCompany.Northwind.Business.Concrete.Manager.*")]
+
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
