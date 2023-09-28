@@ -1,6 +1,8 @@
-﻿using System.Reflection;
+﻿using System.Data.Entity;using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using AydinCompany.Core.Aspects.Postsharp.LogAspects;
+using AydinCompany.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
@@ -13,6 +15,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: LogAspect(typeof(FileLogger), AttributeTargetTypes = "AydinCompany.Northwind.Business.Concrete.Manager.*")] //ilgili namespace'nin içindeki tüm Manager sınıflarına Loglama Aspect'ini uygular.
+[assembly: LogAspect(typeof(DatabaseLogger), AttributeTargetTypes = "AydinCompany.Northwind.Business.Concrete.Manager.*")] //ilgili namespace'nin içindeki tüm Manager sınıflarına Loglama Aspect'ini uygular.
+
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

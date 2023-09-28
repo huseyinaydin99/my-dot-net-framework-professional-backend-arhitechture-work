@@ -41,12 +41,16 @@ namespace AydinCompany.Core.Aspects.Postsharp.CacheAspects
             var arguments = args.Arguments.ToList();
             var key = string.Format("{0}({1})", methodName,
                 string.Join(",", arguments.Select(x => x != null ? x.ToString() : "<Gardaş bu değer NULL'mış")));
-            if (_cacheManager.IsAdd(key))
+
+            if (_cacheManager.IsAdd(key)) //keşte varsa
             {
                 args.ReturnValue = _cacheManager.Get<object>(key);
             }
-            base.OnInvoke(args);
-            _cacheManager.Add(key, args.ReturnValue, _cacheByMinute);
+            else
+            {
+                base.OnInvoke(args);
+                _cacheManager.Add(key, args.ReturnValue, _cacheByMinute); //yoksa veritabanından okunan veriyi cache'e ekle.
+            }
         }
     }
 }

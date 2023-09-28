@@ -18,6 +18,7 @@ using AydinCompany.Northwind.Entities.ComplexType;
 
 namespace AydinCompany.Northwind.Business.Concrete.Manager
 {
+    //[LogAspect(typeof(FileLogger))] //tüm metotlar loglanır.
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
@@ -31,8 +32,8 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
 
 
         [CacheAspect(typeof(MemoryCacheManager), 59)]
-        [LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
-        [LogAspect(typeof(FileLogger))] //aynı zamanda FileLogger ile loglayacaksın dedik.
+        //[LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
+         //aynı zamanda FileLogger ile loglayacaksın dedik.
         public List<Product> GetAll()
         {
             return _productDal.GetList();
@@ -45,15 +46,13 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
 
         [FluentValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect(typeof(MemoryCacheManager))]
-        [LogAspect(typeof(FileLogger))]
         public Product Add(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductValidator(), product); //her seferinde validasyon, caching, security, auditing, exception handling, transaction management... yapılırsa burası çorba olur. clean code'a, solid'e dry'a uymaz! delikanlı adama yakışmaz. o yüzden aspect'lerle metot öncesi ve sonrasına girilmelidir ihtiyaca göre.
             return _productDal.Add(product);
         }
 
-        [FluentValidationAspect(
-            typeof(ProductValidator))] //aspect ile metot oncesine girilir. validasyon yapılır. validasyon gecerliyle metot çalışır görevini yerine getirir.
+        [FluentValidationAspect(typeof(ProductValidator))] //aspect ile metot oncesine girilir. validasyon yapılır. validasyon gecerliyle metot çalışır görevini yerine getirir.
         public Product Update(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductValidator(), product); //her seferinde validasyon, caching, security, auditing, exception handling, transaction management... yapılırsa burası çorba olur. clean code'a, solid'e dry'a uymaz! delikanlı adama yakışmaz. o yüzden aspect'lerle metot öncesi ve sonrasına girilmelidir ihtiyaca göre.
