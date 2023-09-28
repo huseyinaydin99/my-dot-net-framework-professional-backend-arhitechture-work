@@ -12,9 +12,9 @@ namespace AydinCompany.Northwind.Business.ValidationRules.FluentValidation
     {
         public ProductValidator()
         {
-            RuleFor(p => p.ProductId).NotNull().NotEmpty().WithMessage("Boş geçilemez.");
+            //RuleFor(p => p.ProductId).NotNull().NotEmpty().WithMessage("Boş geçilemez.");
             RuleFor(p => p.ProductName).NotNull().NotEmpty();
-            RuleFor(p => p.ProductId).NotNull().NotEmpty();
+            //RuleFor(p => p.ProductId).NotNull().NotEmpty();
             RuleFor(p => p.UnitPrice).GreaterThan(0).NotEmpty().NotNull();
             RuleFor(p => p.QuantityPerUnit).NotNull().NotEmpty();
             RuleFor(p => p.ProductName).Length(2, 20); //min 2 max 20 karakter olabilir. 2 ila 20 arası olmak zorundadır.
