@@ -87,6 +87,7 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
 
         }*/
         [TransactionScopeAspect]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public void TransactionalOperation(Product product, Product product2)
         {
             _productDal.Add(product);

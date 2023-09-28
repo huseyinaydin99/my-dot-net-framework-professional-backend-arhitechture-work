@@ -14,7 +14,7 @@ namespace AydinCompany.Northwind.MVCWebUI.Controllers
 
         public ProductController()
         {
-            
+
         }
 
         public ProductController(IProductService productService)
@@ -42,6 +42,25 @@ namespace AydinCompany.Northwind.MVCWebUI.Controllers
                 UnitPrice = 21
             });
             return "Eklendi";
+        }
+
+        public string AddUpdate()
+        {
+            _productService.TransactionalOperation(new Product()
+                {
+                    CategoryId = 1,
+                    ProductName = "GSM",
+                    QuantityPerUnit = "1",
+                    UnitPrice = 21
+                },
+                new Product()
+                {
+                    CategoryId = 1,
+                    ProductName = "GSM",
+                    QuantityPerUnit = "1",
+                    UnitPrice = -10
+                });
+            return "Bitti";
         }
     }
 }
