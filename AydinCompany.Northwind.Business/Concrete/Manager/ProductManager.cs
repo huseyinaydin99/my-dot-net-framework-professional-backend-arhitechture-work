@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using AydinCompany.Core.Aspects.Postsharp;
+using AydinCompany.Core.Aspects.Postsharp.AuthorizationAspects;
 using AydinCompany.Core.Aspects.Postsharp.CacheAspects;
 using AydinCompany.Core.Aspects.Postsharp.LogAspects;
 using AydinCompany.Core.Aspects.Postsharp.TransactionAspects;
@@ -34,7 +35,8 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
 
         [CacheAspect(typeof(MemoryCacheManager), 59)]
         //[LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
-         //aynı zamanda FileLogger ile loglayacaksın dedik.
+        //aynı zamanda FileLogger ile loglayacaksın dedik.
+        [SecuredOperation(Roles = "Admin, Editor")]
         public List<Product> GetAll()
         {
             Thread.Sleep(3800);
