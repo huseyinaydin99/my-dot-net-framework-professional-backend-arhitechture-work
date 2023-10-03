@@ -36,7 +36,8 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
         [CacheAspect(typeof(MemoryCacheManager), 59)]
         //[LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
         //aynı zamanda FileLogger ile loglayacaksın dedik.
-        [SecuredOperation(Roles = "Admin, Editor")]
+        //[SecuredOperation(Roles = "Admin, Editor")]
+        [SecuredOperation(Roles = "Admin")]
         public List<Product> GetAll()
         {
             Thread.Sleep(3800);

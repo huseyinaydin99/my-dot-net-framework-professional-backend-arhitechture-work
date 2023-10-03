@@ -20,12 +20,13 @@ namespace AydinCompany.Northwind.Business.DependencyResolvers.Ninject
     {
         public override void Load()
         {
-            Bind<IProductDal>().To<EfProductDal>();
-            Bind(typeof(IQueryableRepository<>)).To(typeof(EfQueryableRepository<>));
+            Bind<IProductDal>().To<EfProductDal>().InSingletonScope();
             Bind<IProductService>().To<ProductManager>().InSingletonScope(); //IProductService istediğimizde bize otomatik olarak ProductManager verecek. ProductManager aslında IProductService interface'isini implemente ettiği için IProductService interface'si kendisini implemente eden sınıfın bellek referansını tutabiliyor. Dolayısıyla switch edilebilir bir yapı oluşuyor. Esnek bağlar(loose couplings) kurulabiliyor. Bu da sürdürülebilir yazılım projesi demektir. 
-           
+            Bind(typeof(IQueryableRepository<>)).To(typeof(EfQueryableRepository<>));
 
-            
+            Bind<IUserService>().To<UserManager>();
+            Bind<IUserDal>().To<EfUserDal>();
+
             Bind<DbContext>().To<NorthwindContext>();
             Bind<NHibernateHelper>().To<SqlServerHelper>();
         }
