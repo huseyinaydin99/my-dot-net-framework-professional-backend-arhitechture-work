@@ -8,16 +8,16 @@ using AydinCompany.Northwind.Entities.ComplexType;
 
 namespace AydinCompany.Northwind.MVCWebUI.Controllers
 {
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         private IProductService _productService;
 
-        public ProductController()
+        public ProductsController()
         {
 
         }
 
-        public ProductController(IProductService productService)
+        public ProductsController(IProductService productService)
         {
             _productService = productService;
         }

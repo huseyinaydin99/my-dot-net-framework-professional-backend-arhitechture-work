@@ -37,11 +37,18 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
         //[LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
         //aynı zamanda FileLogger ile loglayacaksın dedik.
         //[SecuredOperation(Roles = "Admin, Editor")]
-        [SecuredOperation(Roles = "Admin")]
+        //[SecuredOperation(Roles = "Admin")]
         public List<Product> GetAll()
         {
             Thread.Sleep(3800);
-            return _productDal.GetList();
+            return _productDal.GetList().Select(p => new Product()
+            {
+                CategoryId = p.CategoryId,
+                ProductId = p.ProductId,
+                ProductName = p.ProductName,
+                QuantityPerUnit = p.QuantityPerUnit,
+                UnitPrice = p.UnitPrice,
+            }).ToList();
         }
 
         public Product GetById(int id)

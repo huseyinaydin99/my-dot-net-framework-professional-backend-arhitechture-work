@@ -8,11 +8,11 @@ using AydinCompany.Northwind.Business.Abstract;
 
 namespace AydinCompany.Northwind.MVCWebUI.Controllers
 {
-    public class AccountController : Controller
+    public class AccountsController : Controller
     {
         private IUserService _userService;
 
-        public AccountController(IUserService userService)
+        public AccountsController(IUserService userService)
         {
             _userService = userService;
         }
