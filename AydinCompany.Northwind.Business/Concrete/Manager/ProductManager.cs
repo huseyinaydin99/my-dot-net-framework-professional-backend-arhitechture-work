@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
 using AydinCompany.Core.Aspects.Postsharp;
 using AydinCompany.Core.Aspects.Postsharp.AuthorizationAspects;
 using AydinCompany.Core.Aspects.Postsharp.CacheAspects;
@@ -13,6 +14,7 @@ using AydinCompany.Core.Aspects.Postsharp.TransactionAspects;
 using AydinCompany.Core.Aspects.Postsharp.ValidationAspects;
 using AydinCompany.Core.CrossCuttingConcerns.Caching.Microsoft;
 using AydinCompany.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
+using AydinCompany.Core.Utilities.Mappings;
 using AydinCompany.Northwind.Business.Abstract;
 using AydinCompany.Northwind.Business.ValidationRules.FluentValidation;
 using AydinCompany.Northwind.DataAccess.Abstract;
@@ -24,12 +26,15 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
     public class ProductManager : IProductService
     {
         private IProductDal _productDal;
+
+        private IMapper _mapper;
         //private readonly IQueryable<Product> _queryable;
 
-        public ProductManager(/*IQueryable<Product> queryable,*/ IProductDal productDal)
+        public ProductManager(/*IQueryable<Product> queryable,*/ IProductDal productDal, IMapper mapper)
         {
             //_queryable = queryable;
             _productDal = productDal;
+            _mapper = mapper;
         }
 
 
@@ -41,16 +46,19 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
         public List<Product> GetAll()
         {
             Thread.Sleep(3800);
-            return _productDal.GetList().Select(p => new Product()
+            /*return _productDal.GetList().Select(p => new Product()
             {
                 CategoryId = p.CategoryId,
                 ProductId = p.ProductId,
                 ProductName = p.ProductName,
                 QuantityPerUnit = p.QuantityPerUnit,
                 UnitPrice = p.UnitPrice,
-            }).ToList();
+            }).ToList();*/
+            //var products = AutoMapperHelper.MapToSameTypeList(_productDal.GetList());
+            var products = _mapper.Map<List<Product>>(_productDal.GetList());
+            return products;
         }
-
+        
         public Product GetById(int id)
         {
             return _productDal.Get(p => p.ProductId == id);
