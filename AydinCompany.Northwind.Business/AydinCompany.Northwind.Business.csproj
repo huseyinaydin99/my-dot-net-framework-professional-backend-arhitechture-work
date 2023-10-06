@@ -72,6 +72,7 @@
     <Compile Include="Concrete\Manager\UserManager.cs" />
     <Compile Include="DependencyResolvers\Ninject\AutoMapperModule.cs" />
     <Compile Include="DependencyResolvers\Ninject\BusinessModule.cs" />
+    <Compile Include="DependencyResolvers\Ninject\InstanceFactory.cs" />
     <Compile Include="DependencyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Mappings\AutoMapper\BusinessProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

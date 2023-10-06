@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using AydinCompany.Northwind.WebAPI.MessageHandlers;
 
 namespace AydinCompany.Northwind.WebAPI
 {
@@ -10,7 +11,7 @@ namespace AydinCompany.Northwind.WebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            config.MessageHandlers.Add(new AuthenticationHandler());
             // Web API routes
             config.MapHttpAttributeRoutes();
 
