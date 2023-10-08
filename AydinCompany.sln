@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.Northwind.Busi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.Northwind.DataAccess.Tests", "AydinCompany.DataAccess.Tests\AydinCompany.Northwind.DataAccess.Tests.csproj", "{C6DF1C18-98BE-41EC-901A-CDBEBEE2E39E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AydinCompany.Northwind.MVCAngularUI", "AydinCompany.Northwind.MVCAngularUI\AydinCompany.Northwind.MVCAngularUI.csproj", "{CB3E5BB9-3A6B-48F1-90F0-2E0A38E70D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{C6DF1C18-98BE-41EC-901A-CDBEBEE2E39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DF1C18-98BE-41EC-901A-CDBEBEE2E39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6DF1C18-98BE-41EC-901A-CDBEBEE2E39E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB3E5BB9-3A6B-48F1-90F0-2E0A38E70D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB3E5BB9-3A6B-48F1-90F0-2E0A38E70D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB3E5BB9-3A6B-48F1-90F0-2E0A38E70D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB3E5BB9-3A6B-48F1-90F0-2E0A38E70D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
