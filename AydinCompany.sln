@@ -20,6 +20,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AydinCompany.Northwind.WCFService", "AydinCompany.Northwind.WCFService\", "{4D80057A-5CF1-4D44-9895-6518E622A7D9}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		ProjectReferences = "{BC5EF0C4-7AF2-43E2-A0D7-1A770365A0F0}|AydinCompany.Northwind.Business.dll;{73E263E4-B397-4110-9F4B-0C3ACF886319}|AydinCompany.Core.dll;{81DE84FB-CCC1-43E2-A18F-E910AF88237A}|AydinCompany.Northwind.DataAccess.dll;{CE833D30-AA79-45BF-8525-759815E5E0AF}|AydinCompany.Northwind.Entities.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_53087"
 		Debug.AspNetCompiler.PhysicalPath = "AydinCompany.Northwind.WCFService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53087\"

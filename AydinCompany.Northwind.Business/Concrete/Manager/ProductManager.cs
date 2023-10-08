@@ -42,7 +42,7 @@ namespace AydinCompany.Northwind.Business.Concrete.Manager
         //[LogAspect(typeof(DatabaseLogger))] //database DatabaseLogger ile loglayacağım dedik.
         //aynı zamanda FileLogger ile loglayacaksın dedik.
         //[SecuredOperation(Roles = "Admin, Editor")]
-        [SecuredOperation(Roles = "Admin")]
+        //[SecuredOperation(Roles = "Admin")]
         public List<Product> GetAll()
         {
             Thread.Sleep(3800);

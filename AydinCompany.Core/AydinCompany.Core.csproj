@@ -70,6 +70,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -128,6 +129,7 @@
     <Compile Include="DataAccess\NHibernate\NhQueryableRepository.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Common\WcfProxy.cs" />
     <Compile Include="Utilities\Mappings\AutoMapperHelper.cs" />
     <Compile Include="Utilities\MVC\Infrastructure\NinjectControllerFactory.cs" />
   </ItemGroup>
