@@ -1,6 +1,10 @@
 ## my-dot-net-framework-professional-backend-arhitechture-work
-.NET Framework 4.6 ile kurumsal ve profesyonel bir back-end mimarisi kurguluyorum. Her gün 3 - 4 saat vakit ayırıp uğraşıyorum.
+
+```
+.NET Framework 4.6 ile kurumsal ve profesyonel bir back-end mimarisi kurguluyorum.
+Her gün 3 - 4 saat vakit ayırıp uğraşıyorum.
 Klasik çok katmanlı mimari ile yazıldı.
+```
 
 ### Kullanılan teknolojiler, teknikler ve yaklaşımlar; 
 Logging, Caching, Security, Exception Handling, Auditing, Performance Management, Transaction Management, Validation'lar, Aspect'ler ile ilgili metotların öncesine, sonrasına, görevler kıstırılarak yazıldı.
